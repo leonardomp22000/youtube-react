@@ -20,6 +20,9 @@ height + padding + border = actual height of an element
   Pueden hacerse combinaciones como 1fr 1fr 2fr 
     grid-column-start: 1; Puede resumirse en grid-column:1/3
     grid-column-end: 3;
+
+
+    Conditional rendering ---- Tema para investigar
  */
 
  *{

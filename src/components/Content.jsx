@@ -24,7 +24,7 @@ export default function Content() {
       image:
         "https://i.ytimg.com/vi/F07sHa6Z7EI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJ_GHVKSpQACfsMGvmuD7ggTodvQ",
       title: "Como instalar linux",
-      chanel: "Canal 3",
+
     },
   ];
   return (
