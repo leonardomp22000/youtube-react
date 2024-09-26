@@ -9,7 +9,7 @@ export default function Categories() {
     "Sports",
   ];
   return (
-    <div id="categories-list">
+    <div className="flex flex-row gap-4">
       {/*
             <span className="category">Cat1</span>
             <span className="category">Cat2</span>
@@ -17,7 +17,7 @@ export default function Categories() {
 */} 
            
       {categories.map((category) => {
-        return <span className="category">{category}</span>;
+        return <span className="p-2 rounded-[20px] bg-[#282828]">{category}</span>;
       })}
         
     </div>

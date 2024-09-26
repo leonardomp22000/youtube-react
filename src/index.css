@@ -24,19 +24,22 @@ height + padding + border = actual height of an element
 
     Conditional rendering ---- Tema para investigar
  */
-
- *{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- }
+}
 
- body{
+body {
   background-color: #0f0f0f;
   color: #f0f0f0;
- }
- 
- #main-layout{
+}
+
+#main-layout {
   width: 100%;
   min-height: 100dvh;
 
@@ -44,115 +47,130 @@ height + padding + border = actual height of an element
   grid-template-columns: 20% 1fr;
   grid-template-rows: 3.2rem 1fr;
   padding: 1rem;
-
- }
- #navbar{
+}
+ 
+#navbar {
   grid-column-start: 1;
   grid-column-end: 3;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
- }
- #logo{
+}
+  
+#logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.3rem;
   padding-left: 1rem;
- }
- #search-container{
+}
+ 
+#search-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+ 
 
- }
- #search-container input {
+input {
   width: 100%;
-  padding: 0.5rem 1rem ;
+  padding: 0.5rem 1rem;
   border: 1px solid #282828;
   border-radius: 1rem;
   background-color: transparent;
- }
+}
+     
 
- #user-Icon{
+#user-Icon {
   display: flex;
   justify-content: flex-end;
- }
- #user-Icon img{
+}
+#user-Icon img {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
- }
- #menu{
+}
+
+
+#menu {
   grid-column: 1/2;
   grid-row: 2/3;
   padding: 0 1rem 0 0;
+}
 
- }
-
- #menu .menu-item{
+#menu .menu-item {
   padding: 1rem;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
+}
 
- }
+#menu .menu-item:hover {
+  background-color: #282828;
+}
 
- #menu .menu-item:hover{
-  background-color: #282828
- }
 
- #content{
+#content {
   grid-column: 2/3;
   grid-column: 2/3;
+}
 
- }
- 
- #categories-list{
+
+#categories-list {
   display: flex;
   flex-direction: row;
   gap: 1rem;
- }
+}
 
- #categories-list .category{
+
+#categories-list .category {
   padding: 0.5rem;
   border-radius: 20px;
   background-color: #282828;
- }
- #videos{
+}
+
+#videos {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   padding-top: 1rem;
-  
- }
- /*Podemos prescindir completamente de los estilos de video-card ya que la etiqueta videos lo tiene */
- .video-card{
+}
+  */
+/*Podemos prescindir completamente de los estilos de video-card ya que la etiqueta videos lo tiene */
+.video-card {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
- 
- }
+}
 
- .video-card img {
+/*
+.video-card img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
- 
- }
- .video-card footer{
+}
+
+.video-card footer {
   display: grid;
   grid-template-columns: 2rem 1fr;
+}
 
- }
- .video-card footer img {
+
+.video-card footer img {
   grid-column: 1/2;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
- }
- .video-card-title, .video-card-chanel {
+}
+
+.video-card-title,
+.video-card-chanel {
   grid-column: 2/3;
- }
+}
+*/
+
+.special {
+  border: 1px solid red;
+}

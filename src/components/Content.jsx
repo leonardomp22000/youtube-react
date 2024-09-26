@@ -28,9 +28,9 @@ export default function Content() {
     },
   ];
   return (
-    <section id="content">
+    <section className="col-start-2 col-end-3 row-start-2 row-span-3 ">
       <Categories />
-      <section id="videos">
+      <section className="grid grid-cols-4 gap-4 pt-4">
         {videos.map((video) => {
           return (
             <Video

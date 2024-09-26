@@ -12,7 +12,7 @@ export default function Menu() {
     { icon: "⏰", text: "Subscriptions" },
   ];
   return (
-    <aside id="menu">
+    <aside className="col-start-1 col-end-2 row-start-2 row-end-3 pl-4">
       {/*  <div className="menu-item">
                 <span>🏡</span>
                 Home
@@ -30,7 +30,7 @@ export default function Menu() {
       {menuItems
       .map((item) => {
         return (
-          <div key={`menu-item-${item.text}`} className="menu-item">
+          <div key={`menu-item-${item.text}`} className="p-4 rounded-[20px] flex flex-row gap items-center hover:bg-[#282828]">
             <span>{item.icon}</span>
             <span>{item.text}</span>
           </div>

@@ -15,6 +15,11 @@ export default function Video(props) {
   // La variable articleClassnames condiciona si el canal es de un youtuber especial para que se agregue una nueva clase y hacer que se
   // vea de forma distinata a las demas
  // const articleClassnames ="video-card" + (props.chanel === "Marques Brownlee" ? " special": "");
+  // Para hacer el renderizado condicional se puede usar una libreria que se llama
+  // clsx 
+
+  /*
+  Con la implementacion clsx podemos quitar las siguientes lineas
 
   let articleClassnames = ['video-card']
 
@@ -22,17 +27,20 @@ export default function Video(props) {
     articleClassnames.push('special')
   }
 
+  */
+
 
   return (
  //   <article className={articleClassnames.join (" ")}>
-    <article className={clsx('video-card', { 'special': props.chanel })}>
-      <img src={props.image} alt="Imagen random" />
+    <article  className= {clsx('video-card', { 'special': props.chanel === "Marques Brownlee"})}>
+      <img className="w-full rounded-[10px] object-cover"  src={props.image} alt="Imagen random" />
 
-      <footer>
+      <footer className="grid grid-cols-[2rem_1fr]">
         {
           /*Esta condicion dice  Si hay canal entonces renderizalo, si no, saltalo y no renderiza*/
           props.chanel && (
             <img
+              className="col-start-1 col-end-2 w-8 h-8 rounded-[50%]"
               src={`https://api.dicebear.com/8.x/notionists-neutral/svg?seed=${props.chanel}`}
               alt="Imagen FOTEER"
             />
@@ -50,8 +58,8 @@ export default function Video(props) {
           ) : <span> 🤷🏿‍♂️ </span>
         */}
 
-        <p className="video-card-title">{props.title}</p>
-        <p className="video-card-chanel">{props.chanel || "UNKNOWN"}</p>
+        <p className="col-start-2 col-end-3">{props.title}</p>
+        <p className="col-start-2 col-end-3">{props.chanel || "UNKNOWN"}</p>
       </footer>
     </article>
   );
